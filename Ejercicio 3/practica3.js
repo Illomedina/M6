@@ -20,25 +20,31 @@ function signup(){
         document.getElementById("alerta").style = "display:block"
     }else
         show("datos")
+        document.getElementById("alerta2").style = "display:none"
+
 }
 function datos(){
-    document.getElementById("alerta2").style = "display:none"
     document.getElementById("datos").style = "display:block"
     nombre = $("#nombre").val()
     apellido = $("#apellido").val()
     edad = $("#edad").val()
-    if(nombre < 2){
-        document.getElementById("alerta").style = "display:block"
-    }else if (apellido < 2){
-        document.getElementById("alerta").style = "display:block"
-    }else if (edad < 0){
-        document.getElementById("alerta").style = "display:block"
-    }else
+    if(nombre != '' && apellido != '' && edad > 0){
         show("resumen")
+        document.getElementById("alerta2").style = "display:none"
+    }else
+        document.getElementById("alerta2").style = "display:block"
 
 }
 function resumen(){
+    email = $("#emailinput").val()
+    nombre = $("#nombre").val()
+    apellido = $("#apellido").val()
+    edad = $("#edad").val()
     document.getElementById("datos").style = "display:none"
+    $("#nombreval").text(nombre)
+    $("#apellidoval").text(apellido)
+    $("#edadval").text(edad)
+    $("#emailval").text(email)
     
     show("resumen")
 }

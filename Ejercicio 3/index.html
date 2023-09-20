@@ -1,0 +1,51 @@
+<html>
+    <header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </header>
+    <body>
+        <div id="signup">
+            <div id="alerta"><h1>RELLENA TODOS LOS CAMPOS</h1></div>
+            <form action="javascript:signup()">
+                <p>USUARIO</p>
+                <input id="emailinput" type="text" name="USUARIO" >
+                <br>
+                <p>CONTRASEÑA</p>
+                <input id="passinput" type="password" name="CONTRASEÑA" >
+                <br>
+                <br>
+                <input onclick="signup()" type="submit" value="SIGN UP">
+            </form>
+        </div>
+        <div id="datos">
+            <div id="alerta2"><h1>RELLENA TODOS LOS CAMPOS</h1></div>
+            <form action="javascript:datos()">
+                <p>NOMBRE</p>
+                <input id = "nombre" type="text" name="NOMBRE" >
+                <br>
+                <p>APELLIDOS</p>
+                <input id="apellidos" type="text" name="APELLIDOS" >
+                <br>
+                <p>EDAD</p>
+                <input id="edad" type="number" name="EDAD" >
+                <br>
+                <br>
+                <input onclick="datos()" type="submit" value="NEXT">
+            </form>
+        </div>
+        <div id="resumen">
+            <p>PERFIL</p>
+            <br>
+            <p>NOMBRE</p>
+            <script>document.write(email);</script>
+            <br>
+            <p>APELLIDOS</p>
+            <br>
+            <p>EDAD</p>
+            <br>
+            <p>EMAIL</p>
+
+        </div>
+    </body>
+    <script src="practica3.js"></script>
+
+</html>
